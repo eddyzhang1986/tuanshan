@@ -11,13 +11,13 @@
         <div class="loginpanel">
             <ul>
                 <li>
-                   <input class="input"  v-model="message" id="txtStoreID" type="number" placeholder="输入门店号" />
+                   <input class="input"  v-model="storeID"  type="number" placeholder="输入门店号" />
                 </li>
                 <li style="height:10px;">
                     &nbsp;
                 </li>
                 <li>
-                    <input type="button" id="btnOk" value="下一步" />
+                    <input type="button" id="btnOk" value="下一步"  v-on:click="nextStep"/>
                 </li>
             </ul>
             <div style="text-align:center;">
@@ -41,16 +41,21 @@ import card from "@/components/card";
 export default {
   data() {
     return {
-      message: "test"
+      storeID: ""
     };
   },
   components: {
     card
+  },
+  methods: {
+    nextStep() {
+      console.log(this.storeID);
+    }
   }
 };
 </script>
 
-<style>
+<style scoped>
 html,
 body {
   margin: 0px;
