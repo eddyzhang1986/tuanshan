@@ -55,7 +55,7 @@ export default {
         this.errorMessage = "请输入门店号";
       } else {
         this.errorMessage = "";
-        const url = "../logs/main";
+        const url = "../login2/main?storeID=" + this.storeID.trim();
         wx.navigateTo({ url });
       }
     }
