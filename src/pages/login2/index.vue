@@ -106,7 +106,8 @@ li {
   -webkit-border-radius: 20px;
   border: 1px solid #c8c9ca;
   font-size: 14px;
-  text-align: center;
+  text-align: left;
+  padding-left: 30px;
   margin: 0px auto;
 }
 
