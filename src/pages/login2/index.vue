@@ -62,11 +62,10 @@ export default {
       this.storeID = storeID;
     },
     async request(storeID, userName, userPwd) {
-      console.log("request" + storeID + userName + userPwd);
       await new new Promise((resolve, reject) => {
         setTimeout(() => {
           resolve();
-        }, 2000);
+        }, 0);
       })();
       console.log("request" + storeID + userName + userPwd);
     },
