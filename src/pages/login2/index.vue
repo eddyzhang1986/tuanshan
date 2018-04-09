@@ -56,7 +56,16 @@ export default {
     };
   },
   methods: {
+    init() {
+      const storeID = this.$root.$mp.query.storeID;
+      console.log(storeID);
+      this.storeID = storeID;
+    },
     doLogin() {}
+  },
+  created() {},
+  onShow() {
+    this.init();
   }
 };
 </script>
