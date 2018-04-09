@@ -12,7 +12,7 @@
             <ul>
 
                 <li>
-                   <input class="input"   type="text" placeholder="输入用户名" />
+                   <input class="input"   type="text" placeholder="输入用户名" v-model="userName" />
                 </li>
 
                 <li style="height:10px;">
@@ -20,14 +20,14 @@
                 </li>
 
                 <li>
-                   <input class="input"   type="text" placeholder="输入密码" />
+                   <input class="input"   type="text" placeholder="输入密码" v-model="userPwd"/>
                 </li>
 
                 <li style="height:10px;">
                     &nbsp;
                 </li>
                 <li>
-                    <input type="button" id="btnOk" value="立即登录" />
+                    <input type="button" class="btnOk" value="立即登录"  @onclick="doLogin"/>
                 </li>
             </ul>
             <div style="text-align:center;">
@@ -46,7 +46,19 @@
 </template>
 
 <script>
-export default {};
+export default {
+  data() {
+    return {
+      storeID: "",
+      userName: "",
+      userPwd: "",
+      errorMessage: ""
+    };
+  },
+  methods: {
+    doLogin() {}
+  }
+};
 </script>
 
 <style scoped>
@@ -111,7 +123,7 @@ li {
   margin: 0px auto;
 }
 
-#btnOk {
+.btnOk {
   width: 283px;
   height: 41px;
   line-height: 41px;

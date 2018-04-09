@@ -17,7 +17,7 @@
                     &nbsp;
                 </li>
                 <li>
-                    <input type="button" id="btnOk" value="下一步"  @click="nextStep"/>
+                    <input type="button" class="btnOk" value="下一步"  @click="nextStep"/>
                 </li>
             </ul>
             <div style="text-align:center;">
@@ -124,7 +124,7 @@ li {
   margin: 0px auto;
 }
 
-#btnOk {
+.btnOk {
   width: 283px;
   height: 41px;
   line-height: 41px;
