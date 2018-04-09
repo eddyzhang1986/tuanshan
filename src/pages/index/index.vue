@@ -50,7 +50,7 @@ export default {
   },
   methods: {
     nextStep() {
-      //console.log(this.storeID);
+      // console.log(this.storeID);
       if (this.storeID.trim() === "") {
         this.errorMessage = "请输入门店号";
       } else {
