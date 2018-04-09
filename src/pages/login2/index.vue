@@ -20,7 +20,7 @@
                 </li>
 
                 <li>
-                   <input class="input"   type="text" placeholder="输入密码" v-model="userPwd"/>
+                   <input class="input" password type="text" placeholder="输入密码"  v-model="userPwd"/>
                 </li>
 
                 <li style="height:10px;">
