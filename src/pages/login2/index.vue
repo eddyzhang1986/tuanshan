@@ -27,7 +27,7 @@
                     &nbsp;
                 </li>
                 <li>
-                    <input type="button" class="btnOk" value="立即登录"  @onclick="doLogin"/>
+                    <input type="button" class="btnOk" value="立即登录"  @click="doLogin"/>
                 </li>
             </ul>
             <div style="text-align:center;">
@@ -61,7 +61,31 @@ export default {
       console.log(storeID);
       this.storeID = storeID;
     },
-    doLogin() {}
+    async request(storeID, userName, userPwd) {
+      console.log("request" + storeID + userName + userPwd);
+      await new new Promise((resolve, reject) => {
+        setTimeout(() => {
+          resolve();
+        }, 2000);
+      })();
+      console.log("request" + storeID + userName + userPwd);
+    },
+    doLogin() {
+      const { storeID, userName, userPwd } = this;
+      if (storeID.trim() === "") {
+        this.errorMessage = "门店ID丢失";
+        return false;
+      } else if (userName.trim() === "") {
+        this.errorMessage = "用户名必填";
+        return false;
+      } else if (userPwd.trim() === "") {
+        this.errorMessage = "密码必填";
+        return false;
+      } else {
+        this.errorMessage = "";
+        this.request(storeID.trim(), userName.trim(), userPwd.trim());
+      }
+    }
   },
   created() {},
   onShow() {
