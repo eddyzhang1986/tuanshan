@@ -17,7 +17,7 @@
                     &nbsp;
                 </li>
                 <li>
-                    <input type="button" id="btnOk" value="下一步"  v-on:click="nextStep"/>
+                    <input type="button" id="btnOk" value="下一步"  @click="nextStep"/>
                 </li>
             </ul>
             <div style="text-align:center;">
@@ -55,6 +55,8 @@ export default {
         this.errorMessage = "请输入门店号";
       } else {
         this.errorMessage = "";
+        const url = "../logs/main";
+        wx.navigateTo({ url });
       }
     }
   }
