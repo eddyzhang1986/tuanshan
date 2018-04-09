@@ -21,7 +21,7 @@
                 </li>
             </ul>
             <div style="text-align:center;">
-                <span class="error"></span>
+                <span class="error">{{errorMessage}}</span>
             </div>
         </div>
 
@@ -41,7 +41,8 @@ import card from "@/components/card";
 export default {
   data() {
     return {
-      storeID: ""
+      storeID: "",
+      errorMessage: ""
     };
   },
   components: {
@@ -49,7 +50,13 @@ export default {
   },
   methods: {
     nextStep() {
+      console.log("/e89e");
       console.log(this.storeID);
+      if (this.storeID.trim() === "") {
+        this.errorMessage = "请输入门店号";
+      } else {
+        this.errorMessage = "";
+      }
     }
   }
 };
